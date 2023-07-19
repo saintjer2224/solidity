@@ -1,0 +1,60 @@
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.8.9;
+
+contract variableContract {
+
+//uint
+   uint myNumber;
+
+    // takes a value _number and assigns it to the state variable number
+    function setNumber(uint newNumber) public {
+          myNumber = newNumber;
+    }
+
+    // returns the value of the state variable number
+    function getNumber() public view returns (uint) {
+        return myNumber;
+    }
+
+//bool
+    bool public isActivated;
+
+    function setActivated(bool newValue) public {
+        isActivated = newValue;
+    }
+
+    function getActivated() public view returns (bool) {
+        return isActivated;
+    }
+
+//string
+    string public greeting;
+
+    function setFruit(string memory _greeting) public {    
+        greeting = _greeting;
+    }
+
+    function getFruit() public view returns (string memory) {
+        return greeting;
+    }
+
+
+//enum
+    enum Status { Pending, Approved, Rejected }
+    Status public currentStatus;
+
+    function setStatus(Status newStatus) public {
+        currentStatus = newStatus;
+    }
+
+    function getStatus() public view returns (Status) {
+        return currentStatus;
+    }
+
+ }
+
+
+
+
+
+
